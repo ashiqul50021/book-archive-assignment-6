@@ -22,7 +22,7 @@ const searchBook = async () => {
         const apiUrl = `http://openlibrary.org/search.json?q=${searchText}`
         const res = await fetch(apiUrl);
         const data = await res.json();
-        displaySearchResult(data.docs);
+        displaySearchResult(data.docs,data);
         searchBtn.value = '';
     }
 
@@ -32,13 +32,13 @@ const searchBook = async () => {
 
 }
 
-const displaySearchResult = (books) => {
+const displaySearchResult = (books,data) => {
     const booksContainer = document.getElementById('books-container');
     // clear books container data
     booksContainer.textContent = '';
     // count Items
     document.getElementById('count').innerText = `
-    your Result : ${books.length}`;
+    your Result : ${books.length} out of ${data.numFound}`;
     // error handle no item in result
     if (books.length === 0) {
         document.getElementById('count').innerText = `
