@@ -38,7 +38,7 @@ const displaySearchResult = (books) => {
     booksContainer.textContent = '';
     // count Items
     document.getElementById('count').innerText = `
-    your Resul : ${books.length}`;
+    your Result : ${books.length}`;
     // error handle no item in result
     if (books.length === 0) {
         document.getElementById('count').innerText = `
