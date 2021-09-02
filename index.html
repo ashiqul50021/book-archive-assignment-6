@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 6</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('images/pexels-ricardo-esquivel-1907785.jpg');
+            background-repeat: repeat;
+            background-size: 100%;
+            overflow: scroll;
+
+        }
+
+        .loader {
+            display: none;
+            height: 10rem;
+            width: 16rem;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            color: white;
+        }
+
+        .card-style:hover {
+            border: 5px solid rgb(233, 230, 230);
+            padding: 10px;
+            border-radius: 5px;
+        }
+       .card-text{
+           overflow: hidden;
+           height: 100px
+       }
+        
+       
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="text-white">Ashiq Book shop</h1>
+        <small></small>
+    </div>
+    <main class="mt-5 container">
+        
+        <!-- search button -->
+
+        <div class="">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search book" aria-label="Search"
+                            id="inputSearch">
+                        <button onclick="searchBook()" class="btn btn-primary" type="submit"
+                            id="btnSearch">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- preloader -->
+        <div id="spinner" class="loader mx-auto">
+            <img src="images/spinner.gif" alt="">
+        </div>
+
+        <!-- count item number -->
+        <h1 id="count">
+
+        </h1>
+
+        <!-- book container -->
+        <div id="books-container" class="row row-cols-1 row-cols-md-3 g-4 h-50">
+
+        </div>
+
+
+    </main>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
